@@ -26,6 +26,7 @@ router.get('/users/:id', [UsersController, 'show']) // Rota para consultar Estud
 // Rotas para Salas
 // RF04: Cadastro de uma nova sala (somente administrador)
 router.post('/rooms',[RoomsController, 'create']) // Rota para registro de Sala
+
 // RF05: Edição dos dados de uma sala (somente administrador)
 router.put('/rooms/:id', [RoomsController, 'update']) // Rota para editar Sala
 
@@ -33,7 +34,7 @@ router.put('/rooms/:id', [RoomsController, 'update']) // Rota para editar Sala
 router.delete('/rooms/:id', [RoomsController, 'delete']) // Rota para Exluir Sala
 
 // RF07: Consulta dos dados de uma sala (somente administrador)
-router.get('/rooms/:id', [RoomsController, 'show']) // Rota para listagem de Sala
+router.get('/rooms/:id', [RoomsController, 'show']) // Rota para dados de uma sala
 
 // Rotas para Alocação
 // RF08: Alocar um usuário em uma sala (somente administrador)
