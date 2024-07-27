@@ -32,7 +32,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
   declare birthDate: DateTime | null
 
   @column()
-  declare isAdmin: boolean
+  declare is_admin: boolean
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

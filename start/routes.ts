@@ -14,7 +14,7 @@ import AllocationsController from '#controllers/allocations_controller'
 
 // Rotas para Usuários (Estudante)
 // RF01: Cadastro e edição de dados de um usuário (somente administrador)
-router.post('/create', [UsersController, 'create']) // RF01 Rota para registro do usuario
+router.post('/users', [UsersController, 'create']) // RF01 Rota para registro do usuario
 router.put('/users/:id', [UsersController, 'update']) // Rota para editar Usuario
 
 // RF02: Exclusão de um usuário (somente administrador)
