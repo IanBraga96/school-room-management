@@ -45,8 +45,11 @@ router.post('/allocate', [AllocationsController, 'allocate']).use(middleware.aut
 // RF09: Remover um usuário de uma sala (somente administrador)
 router.delete('/deallocate', [AllocationsController, 'deallocate']).use(middleware.auth()) // Rota para retirar um aluno na sala
 
-// RF10: Consulta das salas que um usuário deverá comparecer (usuário ainda não está autenticando)
-router.get('/user/:id/rooms', [AllocationsController, 'userRooms']).use(middleware.auth()) // Rota para consultar a sala de um aluno
+// Rotas para Aluno
+// RF10: Consulta das salas que um usuário deverá comparecer
+router.get('/users/rooms/:id', [RoomsController, 'userRooms']) // RF10: Consulta das salas do usuário
 
-router.post('/teste', [AuthController, 'login']) // Rota para login e receber token
+router.post('/login', [AuthController, 'login']) // Rota para login e receber token
+
+
 
