@@ -20,7 +20,7 @@ export default class Allocation extends BaseModel {
   declare updatedAt: DateTime
 
   @belongsTo(() => Room, {
-    foreignKey: 'room_id', // Nome da coluna foreign key no Allocation
+    foreignKey: 'room_id',
   })
   declare room: BelongsTo<typeof Room>
 

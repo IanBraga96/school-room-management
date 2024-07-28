@@ -47,7 +47,7 @@ router.delete('/deallocate', [AllocationsController, 'deallocate']).use(middlewa
 
 // Rotas para Aluno
 // RF10: Consulta das salas que um usuário deverá comparecer
-router.get('/users/rooms/:id', [RoomsController, 'userRooms']) // RF10: Consulta das salas do usuário
+router.get('/users/rooms/:id', [RoomsController, 'userRooms']).use(middleware.UserAuthMiddleware()) // RF10: Consulta das salas do usuário
 
 router.post('/login', [AuthController, 'login']) // Rota para login e receber token
 
