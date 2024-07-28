@@ -49,7 +49,7 @@ export default class User extends compose(BaseModel, AuthFinder) {
     expiresIn: '30 days',
     prefix: 'oat_',
     table: 'auth_access_tokens',
-    type: 'auth_token',
+    type: 'bearer',
     tokenSecretLength: 40,
   })
 }
