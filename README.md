@@ -45,6 +45,9 @@ API desenvolvida para um processo seletivo, com requisitos funcionais e regras d
 
 ## Endpoints
 
+- **Login**
+  - `POST /login`: Login.
+
 - **Usuários**
   - `POST /users`: Cria um novo usuário.
   - `GET /users/:id`: Mostra detalhes de um usuário específico.
