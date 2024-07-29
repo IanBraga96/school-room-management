@@ -52,7 +52,7 @@ API desenvolvida para um processo seletivo, com requisitos funcionais e regras d
     ```
 3. Inicie o servidor:
     ```bash
-    npm start
+    npm run dev
     ```
 4. Para realizar testes automatizados nas rotas:
     ```bash
