@@ -1,6 +1,5 @@
 // test/functional/user.spec.js
 import { test } from '@japa/runner'
-import Allocation from '#models/allocation'
 
 test.group('User', () => {
   let adminToken = ''
