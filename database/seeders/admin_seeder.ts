@@ -11,7 +11,7 @@ export default class AdminSeeder extends BaseSeeder {
     await User.create({
       name: 'Administrador',
       email: 'admin@admin.com',
-      password: await hash.make('senha'),
+      password: await ('senha'),
       birthDate: DateTime.fromISO('1990-01-01'),
       registration_number: '123456',
       is_admin: true,
