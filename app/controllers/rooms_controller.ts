@@ -17,7 +17,7 @@ export default class RoomsController {
     try {
       const data = request.only(['room_number', 'capacity'])
       const room = await Room.create(data)
-      return response.status(201).json(room)
+      return response.status(201).json({ id: room.id, ...room.toJSON() })
     } catch (error) {
       console.error(error)
       return response.status(500).json({ message: 'Erro ao criar sala', error: error.message })

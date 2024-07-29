@@ -22,7 +22,7 @@ export default class UsersController {
       }
 
       const user = await User.create(data)
-      return response.status(201).json(user)
+      return response.status(201).json({ id: user.id, ...user.toJSON() })
     } catch (error) {
       console.error(error)
       return response.status(500).json({ message: 'Erro ao criar usuário', error: error.message })
