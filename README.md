@@ -30,7 +30,15 @@ API desenvolvida para um processo seletivo, com requisitos funcionais e regras d
     ```bash
     npm install
     ```
-4. Configure o arquivo `.env` com suas credenciais.
+4. Configure o arquivo `.env` com suas credenciais do banco de dados.
+    ```dotenv
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_USER=usuário_do_banco
+    DB_PASSWORD=senha_do_banco
+    DB_DATABASE=nome_do_banco
+    ```
 
 ## Uso
 
@@ -38,9 +46,17 @@ API desenvolvida para um processo seletivo, com requisitos funcionais e regras d
     ```bash
     node ace migration:run
     ```
-2. Inicie o servidor:
+2. Gere um administrador através do seed:
+    ```bash
+    node ace db:seed
+    ```
+3. Inicie o servidor:
     ```bash
     npm start
+    ```
+4. Para realizar testes automatizados nas rotas:
+    ```bash
+    node ace test
     ```
 
 ## Endpoints
@@ -63,7 +79,7 @@ API desenvolvida para um processo seletivo, com requisitos funcionais e regras d
 - **Alocações**
   - `POST /allocate`: Aloca um estudante em uma sala.
   - `DELETE /deallocate`: Remove um estudante de uma sala.
-  - `GET /user/:id/rooms`: Consulta das salas alocada pelo usuario.
+  - `GET /user/:id/rooms`: Consulta das salas alocadas pelo usuário.
 
 ## Contribuição
 
